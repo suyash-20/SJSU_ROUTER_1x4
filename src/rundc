@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Refer to running_dc_shell on Canvas for script documentation
+#
+source /apps/set_license.sh
+export PATH=$PATH:/apps/synopsys/SYNTH/bin
+
+if [ $# -eq 0 ]; then
+    echo "calling format ./rundc fname options"
+    echo "fname does not include suffix"
+    echo "options:"
+    echo "  -p clk_period"
+    echo "  -c clk_name"
+    echo "  -r reset_name"
+    exit 99
+fi
+while [ $# -gt 0 ] ; do
+    case $1 in
+        -r) shift; export RESET=$1 
+        ;;
+        -c) shift; export CLOCK=$1
+        ;;
+        -p) shift; export PERIOD=$1
+        ;;
+        *) export FILENAME=$1
+        ;;
+    esac
+    shift
+done
+
+dc_shell -f synthesis.script | tee synres.txt
+
+grep -i latch synres.txt
+grep -i error synres.txt
+grep -i violated synres.txt
+
+

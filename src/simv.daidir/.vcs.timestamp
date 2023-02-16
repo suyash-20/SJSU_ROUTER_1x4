@@ -1,0 +1,117 @@
+0 
+23
+-Mamsrun=
+-Masflags=--32
+-Mcc=gcc
+-Mcfl= -pipe -m32 -O -I/apps/synopsys/VCS_current/vcs/R-2020.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -m32 -m32 -rdynamic
+-Mobjects= /apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/libvirsim.so /apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/liberrorinf.so /apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/libsnpsmalloc.so /apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/ctype-stubs_32.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -m32 -I/apps/synopsys/VCS_current/vcs/R-2020.12/include
+-Mxllcflags=
+-gen_obj
+-picarchive
+-sverilog
+/apps/synopsys/VCS_current/vcs/R-2020.12/linux/bin/vcs1
+rtl/r_fifo.sv
+tb/r_fifo_tb.sv
+80
+cdk_dir=/apps/cadence/IC50/tools/dfII/local
+XRDP_SOCKET_PATH=/run/xrdp
+XRDP_SESSION=1
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_15
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_15
+XMODIFIERS=@im=ibus
+XDG_SESSION_ID=14405
+XDG_RUNTIME_DIR=/run/user/245494630
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/015760940@SJSUAD.SJSU.EDU/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_CURRENT_DESKTOP=GNOME
+VTE_VERSION=5204
+VMR_MODE_FLAG=32
+VENDOR=unknown
+VCS_MX_HOME_INTERNAL=1
+VCS_HOME=/apps/synopsys/VCS_current/vcs/R-2020.12
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+VCSMX_HOME=/apps/synopsys/VCS_current/vcs/R-2020.12
+USE_NCSU_CDK=
+UNAME=/bin/uname
+TOOL_HOME=/apps/synopsys/VCS_current/vcs/R-2020.12/linux
+TK_LIBRARY=/apps/synopsys/VCS_current/vcs/R-2020.12/etc/auxx/tcllib/tk8.4/library
+SYNOPSYS_SIM=/apps/synopsys/2000.12
+SYNOPSYS=/apps/synopsys
+STROOT=/apps/synopsys/TCAD
+STRELEASE=current
+STDB=/home/015760940@SJSUAD.SJSU.EDU/sentaurus
+SSH_AUTH_SOCK=/run/user/245494630/keyring/ssh
+SSH_AGENT_PID=15368
+SNPSLMS_LICENSE_FILE=27020@coe-ee-licsrv.sjsuad.sjsu.edu:C:LicensingSynopsysSynopsys_Key_Site_5009_Server_337521_snpslmd.lic
+SKIP_CDS_DIALOG=
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/15190,unix/unix:/tmp/.ICE-unix/15190
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
+PRIMETIME_ROOT=/apps/synopsys/pt2000.11
+OVA_UUM=0
+OSTYPE=linux
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:245494630
+KDEDIRS=/usr
+IUS=/apps/cadence/INCISIVE152
+ISEROOT=/apps/synopsys/TCAD/
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+IC=/apps/cadence/IC50
+HSP_HOME=/apps/synopsys/HSPICE/hspice
+HOSTTYPE=x86_64-linux
+HISTCONTROL=ignoredups
+GROUP=domain users
+GNOME_TERMINAL_SERVICE=:1.101
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/2682d399_3ac7_4724_9038_9f1493654df1
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+DBUS_STARTER_BUS_TYPE=session
+DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-ewSTkoTQQT,guid=a013be699529f0c3409c189b63ed8a3d
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ewSTkoTQQT,guid=a013be699529f0c3409c189b63ed8a3d
+COLORTERM=truecolor
+CLS_CSD_COMPATIBILITY_LOCKING=NO
+CLS_CDSD_COMPATIBILITY_LOCKING=NO
+CDS_VHDL=/apps/cadence/INCISIVE152/tools/leapfrog
+CDS_SITE=/apps/cadence/IC50/tools/dfII/local
+CDS_Netlisting_Mode=Analog
+CDS_LIC_FILE=5280@coe-ee-licsrv.sjsuad.sjsu.edu:C:CadenceLicenseManagerlicense.dat
+CDSLMD_LICENSE_FILE=5280@coe-ee-licsrv.sjsuad.sjsu.edu:C:CadenceLicenseManagerlicense.dat
+CDS=/apps/cadence
+ARCH=linux
+0
+2
+1676515525 tb/r_fifo_tb.sv
+1676515289 rtl/r_fifo.sv
+4
+1607401685 /apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/libvirsim.so
+1607401344 /apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/liberrorinf.so
+1607401192 /apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/libsnpsmalloc.so
+1607401539 /apps/synopsys/VCS_current/vcs/R-2020.12/linux/lib/libvfs.so
+1676515532 simv.daidir
+-1 partitionlib

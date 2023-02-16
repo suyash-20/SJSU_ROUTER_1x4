@@ -1,0 +1,568 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+              Version K-2015.06-SP5-1 for linux64 - Feb 26, 2016 
+                                        
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+read_sverilog rtl/r_fifo.sv 	
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+Loading db file '/apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading sverilog file '/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.sv
+
+Inferred memory devices in process
+	in routine r_fifo line 33 in file
+		'/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lfd_temp_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine r_fifo line 46 in file
+		'/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    fifo_mem_reg     | Flip-flop |  144  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine r_fifo line 68 in file
+		'/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|      data_out_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| data_out_tri_enable_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine r_fifo line 82 in file
+		'/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| packet_len_count_reg | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine r_fifo line 101 in file
+		'/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    read_ptr_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|    write_ptr_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred tri-state devices in process
+	in routine r_fifo line 68 in file
+		'/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.sv'.
+============================================
+| Register Name |       Type       | Width |
+============================================
+| data_out_tri  | Tri-State Buffer |   8   |
+============================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    r_fifo/78     |   16   |    8    |      4       |
+|    r_fifo/88     |   16   |    1    |      4       |
+|    r_fifo/89     |   16   |    6    |      4       |
+======================================================
+Presto compilation completed successfully.
+Current design is now '/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/rtl/r_fifo.db:r_fifo'
+Loaded 1 design.
+Current design is 'r_fifo'.
+r_fifo
+current_design r_fifo		
+Current design is 'r_fifo'.
+{r_fifo}
+create_clock clk -name clk -period 3.4875000000000003
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clk
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_output_delay 0.5 -clock clk [all_outputs]
+1
+set all_inputs_wo_rst_clk [remove_from_collection [remove_from_collection [all_inputs] [get_port clk]] [get_port reset]]
+Warning: Can't find port 'reset' in design 'r_fifo'. (UID-95)
+{resetn soft_reset write_enb read_enb lfd_state data_in[7] data_in[6] data_in[5] data_in[4] data_in[3] data_in[2] data_in[1] data_in[0]}
+set_driving_cell -lib_cell CND2X1 $all_inputs_wo_rst_clk
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay 0.6 -clock clk $all_inputs_wo_rst_clk
+1
+set_output_delay 0.6 -clock clk [all_outputs]
+1
+set_fix_hold [ get_clocks clk ]
+1
+set_host_options -max_cores 4
+1
+set_output_delay 0.3 -clock clk [all_outputs]
+1
+set_max_delay 3.255 -from [all_inputs] -to [all_outputs]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 4 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.5.1 |   *     |
+| Licensed DW Building Blocks        | I-2013.12-DWBB_201312.5 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 27 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'r_fifo'
+
+Loaded alib file './alib-52/tc240c.db_NOMIN25.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'r_fifo'
+Information: Added key list 'DesignWare' to design 'r_fifo'. (DDB-72)
+Information: In design 'r_fifo', the register 'data_out_tri_enable_reg[2]' is removed because it is merged to 'data_out_tri_enable_reg[1]'. (OPT-1215)
+Information: In design 'r_fifo', the register 'data_out_tri_enable_reg[3]' is removed because it is merged to 'data_out_tri_enable_reg[1]'. (OPT-1215)
+Information: In design 'r_fifo', the register 'data_out_tri_enable_reg[4]' is removed because it is merged to 'data_out_tri_enable_reg[1]'. (OPT-1215)
+Information: In design 'r_fifo', the register 'data_out_tri_enable_reg[5]' is removed because it is merged to 'data_out_tri_enable_reg[1]'. (OPT-1215)
+Information: In design 'r_fifo', the register 'data_out_tri_enable_reg[6]' is removed because it is merged to 'data_out_tri_enable_reg[1]'. (OPT-1215)
+Information: In design 'r_fifo', the register 'data_out_tri_enable_reg[7]' is removed because it is merged to 'data_out_tri_enable_reg[1]'. (OPT-1215)
+Information: In design 'r_fifo', the register 'data_out_tri_enable_reg[0]' is removed because it is merged to 'data_out_tri_enable_reg[1]'. (OPT-1215)
+ Implement Synthetic for 'r_fifo'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+  Beginning Constant Register Removal
+  -----------------------------------
+Information: The register 'packet_len_count_reg[6]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:05    1395.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:05    1395.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:05    1395.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:05    1395.0      0.00       0.0       0.0                              0.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    1393.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1390.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1390.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1390.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1390.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1389.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1389.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1389.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    1389.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    1387.0      0.00       0.0       0.0                              0.0000      0.00  
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+create_clock clk -name clk -period 4.65
+1
+update_timing
+Information: Updating design information... (UID-85)
+1
+report_timing -max_paths 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : r_fifo
+Version: K-2015.06-SP5-1
+Date   : Wed Feb 15 19:16:24 2023
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: read_ptr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fifo_mem_reg[6][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  read_ptr_reg[3]/CP (CFD1QXL)             0.00       0.00 r
+  read_ptr_reg[3]/Q (CFD1QXL)              0.61       0.61 r
+  U772/Z (CENX1)                           0.19       0.81 f
+  U776/Z (CND4X1)                          0.07       0.87 r
+  U826/Z (CNR2IX1)                         0.07       0.94 f
+  U850/Z (CNR2IX1)                         0.10       1.04 r
+  U851/Z (CIVX2)                           0.07       1.11 f
+  U685/Z (CNR2X1)                          0.17       1.27 r
+  U684/Z (CIVXL)                           0.10       1.37 f
+  U874/Z (CNR3XL)                          0.42       1.79 r
+  U514/Z (CANR1XL)                         0.45       2.23 f
+  U667/Z (CND2XL)                          0.09       2.32 r
+  U944/Z (COND1XL)                         0.08       2.40 f
+  fifo_mem_reg[6][0]/D (CFD1QXL)           0.00       2.40 f
+  data arrival time                                   2.40
+
+  clock clk (rise edge)                    4.65       4.65
+  clock network delay (ideal)              0.00       4.65
+  clock uncertainty                       -0.25       4.40
+  fifo_mem_reg[6][0]/CP (CFD1QXL)          0.00       4.40 r
+  library setup time                      -0.27       4.13
+  data required time                                  4.13
+  -----------------------------------------------------------
+  data required time                                  4.13
+  data arrival time                                  -2.40
+  -----------------------------------------------------------
+  slack (MET)                                         1.73
+
+
+  Startpoint: read_ptr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fifo_mem_reg[6][4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  read_ptr_reg[3]/CP (CFD1QXL)             0.00       0.00 r
+  read_ptr_reg[3]/Q (CFD1QXL)              0.61       0.61 r
+  U772/Z (CENX1)                           0.19       0.81 f
+  U776/Z (CND4X1)                          0.07       0.87 r
+  U826/Z (CNR2IX1)                         0.07       0.94 f
+  U850/Z (CNR2IX1)                         0.10       1.04 r
+  U851/Z (CIVX2)                           0.07       1.11 f
+  U685/Z (CNR2X1)                          0.17       1.27 r
+  U684/Z (CIVXL)                           0.10       1.37 f
+  U874/Z (CNR3XL)                          0.42       1.79 r
+  U514/Z (CANR1XL)                         0.45       2.23 f
+  U562/Z (CND2XL)                          0.09       2.32 r
+  U948/Z (COND1XL)                         0.08       2.40 f
+  fifo_mem_reg[6][4]/D (CFD1QXL)           0.00       2.40 f
+  data arrival time                                   2.40
+
+  clock clk (rise edge)                    4.65       4.65
+  clock network delay (ideal)              0.00       4.65
+  clock uncertainty                       -0.25       4.40
+  fifo_mem_reg[6][4]/CP (CFD1QXL)          0.00       4.40 r
+  library setup time                      -0.27       4.13
+  data required time                                  4.13
+  -----------------------------------------------------------
+  data required time                                  4.13
+  data arrival time                                  -2.40
+  -----------------------------------------------------------
+  slack (MET)                                         1.73
+
+
+  Startpoint: read_ptr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fifo_mem_reg[6][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  read_ptr_reg[3]/CP (CFD1QXL)             0.00       0.00 r
+  read_ptr_reg[3]/Q (CFD1QXL)              0.61       0.61 r
+  U772/Z (CENX1)                           0.19       0.81 f
+  U776/Z (CND4X1)                          0.07       0.87 r
+  U826/Z (CNR2IX1)                         0.07       0.94 f
+  U850/Z (CNR2IX1)                         0.10       1.04 r
+  U851/Z (CIVX2)                           0.07       1.11 f
+  U685/Z (CNR2X1)                          0.17       1.27 r
+  U684/Z (CIVXL)                           0.10       1.37 f
+  U874/Z (CNR3XL)                          0.42       1.79 r
+  U514/Z (CANR1XL)                         0.45       2.23 f
+  U639/Z (CND2XL)                          0.09       2.32 r
+  U949/Z (COND1XL)                         0.08       2.40 f
+  fifo_mem_reg[6][3]/D (CFD1QXL)           0.00       2.40 f
+  data arrival time                                   2.40
+
+  clock clk (rise edge)                    4.65       4.65
+  clock network delay (ideal)              0.00       4.65
+  clock uncertainty                       -0.25       4.40
+  fifo_mem_reg[6][3]/CP (CFD1QXL)          0.00       4.40 r
+  library setup time                      -0.27       4.13
+  data required time                                  4.13
+  -----------------------------------------------------------
+  data required time                                  4.13
+  data arrival time                                  -2.40
+  -----------------------------------------------------------
+  slack (MET)                                         1.73
+
+
+  Startpoint: read_ptr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fifo_mem_reg[6][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  read_ptr_reg[3]/CP (CFD1QXL)             0.00       0.00 r
+  read_ptr_reg[3]/Q (CFD1QXL)              0.61       0.61 r
+  U772/Z (CENX1)                           0.19       0.81 f
+  U776/Z (CND4X1)                          0.07       0.87 r
+  U826/Z (CNR2IX1)                         0.07       0.94 f
+  U850/Z (CNR2IX1)                         0.10       1.04 r
+  U851/Z (CIVX2)                           0.07       1.11 f
+  U685/Z (CNR2X1)                          0.17       1.27 r
+  U684/Z (CIVXL)                           0.10       1.37 f
+  U874/Z (CNR3XL)                          0.42       1.79 r
+  U514/Z (CANR1XL)                         0.45       2.23 f
+  U585/Z (CND2XL)                          0.09       2.32 r
+  U950/Z (COND1XL)                         0.08       2.40 f
+  fifo_mem_reg[6][2]/D (CFD1QXL)           0.00       2.40 f
+  data arrival time                                   2.40
+
+  clock clk (rise edge)                    4.65       4.65
+  clock network delay (ideal)              0.00       4.65
+  clock uncertainty                       -0.25       4.40
+  fifo_mem_reg[6][2]/CP (CFD1QXL)          0.00       4.40 r
+  library setup time                      -0.27       4.13
+  data required time                                  4.13
+  -----------------------------------------------------------
+  data required time                                  4.13
+  data arrival time                                  -2.40
+  -----------------------------------------------------------
+  slack (MET)                                         1.73
+
+
+  Startpoint: read_ptr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fifo_mem_reg[6][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  read_ptr_reg[3]/CP (CFD1QXL)             0.00       0.00 r
+  read_ptr_reg[3]/Q (CFD1QXL)              0.61       0.61 r
+  U772/Z (CENX1)                           0.19       0.81 f
+  U776/Z (CND4X1)                          0.07       0.87 r
+  U826/Z (CNR2IX1)                         0.07       0.94 f
+  U850/Z (CNR2IX1)                         0.10       1.04 r
+  U851/Z (CIVX2)                           0.07       1.11 f
+  U685/Z (CNR2X1)                          0.17       1.27 r
+  U684/Z (CIVXL)                           0.10       1.37 f
+  U874/Z (CNR3XL)                          0.42       1.79 r
+  U514/Z (CANR1XL)                         0.45       2.23 f
+  U565/Z (CND2XL)                          0.09       2.32 r
+  U951/Z (COND1XL)                         0.08       2.40 f
+  fifo_mem_reg[6][1]/D (CFD1QXL)           0.00       2.40 f
+  data arrival time                                   2.40
+
+  clock clk (rise edge)                    4.65       4.65
+  clock network delay (ideal)              0.00       4.65
+  clock uncertainty                       -0.25       4.40
+  fifo_mem_reg[6][1]/CP (CFD1QXL)          0.00       4.40 r
+  library setup time                      -0.27       4.13
+  data required time                                  4.13
+  -----------------------------------------------------------
+  data required time                                  4.13
+  data arrival time                                  -2.40
+  -----------------------------------------------------------
+  slack (MET)                                         1.73
+
+
+1
+write -hierarchy -format verilog -output r_fifo_syn.v
+Writing verilog file '/home/015760940@SJSUAD.SJSU.EDU/EE297B/src/r_fifo_syn.v'.
+1
+quit
+
+Thank you...
