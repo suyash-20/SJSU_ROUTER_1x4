@@ -1,0 +1,66 @@
+$date
+	Fri Mar 03 14:22:03 2023
+$end
+$version
+	QuestaSim Version 10.6c
+$end
+$timescale
+	1ns
+$end
+
+$scope module r_sync_tb $end
+
+$scope task reset $end
+$upscope $end
+
+$scope task vld_out $end
+$upscope $end
+
+$scope task write_enable $end
+$upscope $end
+
+$scope task soft_rst $end
+$upscope $end
+
+$scope module dut $end
+$var wire 1 ! detect_add $end
+$var reg 4 " write_enb [3:0] $end
+$var reg 2 # data_temp [1:0] $end
+$upscope $end
+$upscope $end
+
+$scope begin std $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx "
+bx #
+x!
+$end
+#15
+b0 #
+b0 "
+#450
+1!
+#455
+bx #
+#475
+b0 #
+#480
+b1 "
+#495
+b1 #
+b10 "
+#655
+b11 #
+b1000 "
+#785
+b10 #
+b100 "
+#1855
+b0 #
+b1 "
+#1875
+b10 #
+b100 "

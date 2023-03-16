@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Work/MASTERS/San Jose/Academics/BOOKS/Homerun semester/EE297B/Router_1x4/SJSU_ROUTER_1x4/src
+T_opt
+!s110 1677882122
+VzHbRX9;_4LGSab;XPDjDj2
+Z1 04 9 4 work r_sync_tb fast 0
+=1-e02be913582b-6402730a-1d-4b10
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.6c;65
+T_opt1
+!s110 1677824402
+VHkaDMZlC@3haZ4TYE;2MY1
+04 11 4 work router_sync fast 0
+R1
+=1-e02be913582b-64019192-24e-37f8
+R2
+R3
+n@_opt1
+R4
+R0
+vr_sync
+Z5 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z6 !s110 1677882119
+!i10b 1
+!s100 ]d;RYkO1;43?K[KI^oWLT0
+IPbVh19:GPE;a59GJF_MN01
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 !s105 r_sync_sv_unit
+S1
+R0
+w1677873627
+Z9 8rtl/r_sync.sv
+Z10 Frtl/r_sync.sv
+L0 1
+Z11 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z12 !s108 1677882119.000000
+Z13 !s107 tb/r_sync_tb.sv|rtl/r_sync.sv|
+Z14 !s90 rtl/r_sync.sv|tb/r_sync_tb.sv|
+!i113 0
+Z15 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vr_sync_tb
+R5
+R6
+!i10b 1
+!s100 [kXCBPRZRQnkzkRkK?S1M0
+IU^h_I:kBA;mUb;YFW52LS1
+R7
+!s105 r_sync_tb_sv_unit
+S1
+R0
+w1677882115
+8tb/r_sync_tb.sv
+Ftb/r_sync_tb.sv
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R3
+vrouter_sync
+R5
+!s110 1677824895
+!i10b 1
+!s100 ]HWbg<8`zM>G?HFQ=8:Vl0
+I]SLiEWV6QoY?fSf4ob7_e0
+R7
+R8
+S1
+R0
+w1677824772
+R9
+R10
+L0 271
+R11
+r1
+!s85 0
+31
+!s108 1677824895.000000
+R13
+R14
+!i113 0
+R15
+R3

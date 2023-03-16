@@ -1,0 +1,43 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Work/MASTERS/San Jose/Academics/BOOKS/Homerun semester/EE297B/Router_1x4/SJSU_ROUTER_1x4/rtl
+T_opt
+!s110 1677812005
+V5SIaLYl5C?>ko[bA_BW`L2
+04 6 4 work r_sync fast 0
+=1-e02be913582b-64016125-16d-6518
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+vr_sync
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1677812002
+!i10b 1
+!s100 T2<Y?5[`?0c0=OhPzf5N;2
+I^0>BcJH:Ze_z]h0f7d;GY2
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 r_sync_sv_unit
+S1
+R0
+w1677811942
+8r_sync.sv
+Fr_sync.sv
+L0 1
+OL;L;10.6c;65
+r1
+!s85 0
+31
+!s108 1677812002.000000
+!s107 r_sync.sv|
+!s90 r_sync.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
