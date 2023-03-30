@@ -1,9 +1,9 @@
-module r_fsm(clk, resetn, pkt_valid, data_in, fifo_full, fifo_empty_0, fifo_empty_1, fifo_empty_2, fifo_empty_3, soft_reset_0, soft_reset_1, soft_reset_2, soft_reset_3, parity_done, low_packet_valid,
+module r_fsm(clk, resetn, pkt_valid, /*data_in,*/ fifo_full, fifo_empty_0, fifo_empty_1, fifo_empty_2, fifo_empty_3, soft_reset_0, soft_reset_1, soft_reset_2, soft_reset_3, parity_done, low_packet_valid,
             write_enb_reg, detect_add, ld_state, laf_state, lfd_state, full_state, rst_int_reg, busy);
 
 
             input clk, resetn, pkt_valid;
-            input [7:0] data_in;
+            //input [1:0] data_in;
             input fifo_full, fifo_empty_0, fifo_empty_1, fifo_empty_2, fifo_empty_3;
             input soft_reset_0, soft_reset_1, soft_reset_2, soft_reset_3, parity_done, low_packet_valid;
 
@@ -19,6 +19,9 @@ module r_fsm(clk, resetn, pkt_valid, data_in, fifo_full, fifo_empty_0, fifo_empt
 
             always @(posedge clk) begin
                 if(~resetn) begin
+
+                {write_enb_reg, detect_add, ld_state, laf_state, lfd_state, full_state, rst_int_reg, busy} <= 0;
+
                     current_state <= DECODE_ADDRESS; 
                 end
                 else if(soft_reset_0 || soft_reset_1 || soft_reset_2 || soft_reset_3)
@@ -31,7 +34,6 @@ module r_fsm(clk, resetn, pkt_valid, data_in, fifo_full, fifo_empty_0, fifo_empt
 
 
             always@(*) begin
-                {write_enb_reg, detect_add, ld_state, laf_state, lfd_state, full_state, rst_int_reg, busy} = 'b0;
 
                 case(current_state)
 
@@ -93,7 +95,7 @@ module r_fsm(clk, resetn, pkt_valid, data_in, fifo_full, fifo_empty_0, fifo_empt
 
                     else begin
                         next_state = FIFO_FULL_STATE;
-                    end
+                    end 
                 end
 
                 LOAD_AFTER_FULL: begin
@@ -109,8 +111,13 @@ module r_fsm(clk, resetn, pkt_valid, data_in, fifo_full, fifo_empty_0, fifo_empt
                         next_state = LOAD_PARITY;
                     end
                     
-                    else
+                    
+                    else if (~parity_done && ~low_packet_valid) begin
                         next_state = LOAD_DATA;
+                    end
+
+                    else
+                        next_state = LOAD_AFTER_FULL;
 
                 end
 
@@ -136,14 +143,11 @@ module r_fsm(clk, resetn, pkt_valid, data_in, fifo_full, fifo_empty_0, fifo_empt
 
                     rst_int_reg = 'b1;
                     busy = 'b1;
-                    if(~fifo_full)
-                        next_state = DECODE_ADDRESS;
-
-                    else if(fifo_full)
+                    if(fifo_full)
                         next_state = FIFO_FULL_STATE;
 
-                    else
-                        next_state = CHECK_PARITY_ERROR;
+                    else 
+                        next_state = DECODE_ADDRESS;
 
                 end
         

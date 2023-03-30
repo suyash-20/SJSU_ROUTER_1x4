@@ -1,7 +1,7 @@
 module r_fsm_tb();
 
     reg clk, resetn, pkt_valid;
-    reg [7:0] data_in;
+    //reg [1:0] data_in;
     reg fifo_full, fifo_empty_0, fifo_empty_1, fifo_empty_2, fifo_empty_3;
     reg soft_reset_0, soft_reset_1, soft_reset_2, soft_reset_3, parity_done, low_packet_valid;
 
@@ -9,7 +9,7 @@ module r_fsm_tb();
     wire full_state, rst_int_reg, busy; 
 
 
-    r_fsm dut (clk, resetn, pkt_valid, data_in, fifo_full, fifo_empty_0, fifo_empty_1, fifo_empty_2, fifo_empty_3, soft_reset_0, soft_reset_1, soft_reset_2, soft_reset_3, parity_done, low_packet_valid,
+    r_fsm dut (clk, resetn, pkt_valid, /*data_in,*/ fifo_full, fifo_empty_0, fifo_empty_1, fifo_empty_2, fifo_empty_3, soft_reset_0, soft_reset_1, soft_reset_2, soft_reset_3, parity_done, low_packet_valid,
             write_enb_reg, detect_add, ld_state, laf_state, lfd_state, full_state, rst_int_reg, busy);
 
     
@@ -24,6 +24,8 @@ module r_fsm_tb();
         #20;
         @(negedge clk);
         resetn = 'b1;
+
+	
     endtask
 
 
@@ -40,8 +42,8 @@ module r_fsm_tb();
         @(negedge clk);
         fifo_full = 'b0;
 
-        @(negedge clk);
-        fifo_full = 'b0;
+//        @(negedge clk);
+//        fifo_full = 'b0;
     
     endtask
 
@@ -63,7 +65,9 @@ module r_fsm_tb();
         #20;
         @(negedge clk);
         fifo_full = 'b0;
-    
+    	
+	@(negedge clk);
+	parity_done = 'b1;
     endtask
 
     task soft_reset_loop_back();
@@ -75,6 +79,17 @@ module r_fsm_tb();
         soft_reset_2 = 'b1;
         @(negedge clk);
         soft_reset_3 = 'b1;
+
+
+	@(negedge clk);
+        soft_reset_0 = 'b0;
+        @(negedge clk);
+        soft_reset_1 = 'b0;
+        @(negedge clk);
+        soft_reset_2 = 'b0;
+        @(negedge clk);
+        soft_reset_3 = 'b0;
+
     endtask
 
     task long_packet();
@@ -92,17 +107,39 @@ module r_fsm_tb();
 
         #50;
         @(negedge clk);
-        pkt_valid = 'b0;
+       low_packet_valid = 'b0;
         @(negedge clk);
-        fifo_full = 'b0;
+        parity_done = 'b0;
+
+
+	@(negedge clk);
+	fifo_full = 'b0;
+	@(negedge clk);
+	pkt_valid = 'b0;
+	
 
     endtask
 
     task wait_until_empty();
+
+	@(negedge clk);
+	{pkt_valid, fifo_full, fifo_empty_0, fifo_empty_1, fifo_empty_2, fifo_empty_3, soft_reset_0, soft_reset_1, soft_reset_2, soft_reset_3, parity_done, low_packet_valid} = 0;
+
         @(negedge clk);
         pkt_valid = 'b1;
         @(negedge clk);
         fifo_empty_0 = 'b0;
+
+
+	#30;
+	@(negedge clk);
+	fifo_empty_0 = 'b1;
+
+	@(negedge clk);
+	fifo_full = 0;
+	@(negedge clk);
+	pkt_valid = 0;
+
     endtask
 
 
@@ -115,22 +152,35 @@ module r_fsm_tb();
         normal_data_route();
 
         #100;
+	sys_reset();
+
+	#30;
 
         fifo_full_condition();
 
         #50;
+
+	sys_reset();
+	#30;
 
         soft_reset_loop_back();
 
         #20;
         long_packet();
         #20;
-        wait_until_empty();
+
+	sys_reset();
+        #30;
+	wait_until_empty();
         
     end
 
     initial begin
         $monitor("FSM STATE: ", dut.current_state," at time: %t", $time);
+	
+	$dumpfile("fsm.vcd");
+	$dumpvars();
+
         #10000 $finish();
     end
 
