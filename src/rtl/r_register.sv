@@ -1,4 +1,4 @@
-module router_reg(clk, resetn, pkt_valid, data_in, fifo_full,
+module r_reg(clk, resetn, pkt_valid, data_in, fifo_full,
 		  detect_add, ld_state, laf_state,full_state, lfd_state, rst_int_reg,
 		  err, parity_done, low_packet_valid, dout);
 

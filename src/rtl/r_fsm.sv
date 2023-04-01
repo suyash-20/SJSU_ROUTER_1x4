@@ -20,7 +20,14 @@ module r_fsm(clk, resetn, pkt_valid, /*data_in,*/ fifo_full, fifo_empty_0, fifo_
             always @(posedge clk) begin
                 if(~resetn) begin
 
-                {write_enb_reg, detect_add, ld_state, laf_state, lfd_state, full_state, rst_int_reg, busy} <= 0;
+                /*write_enb_reg <= 0;
+                detect_add <= 0;
+                ld_state <= 0;
+                laf_state <= 0;
+                lfd_state <= 0;
+                full_state <= 0;
+                rst_int_reg <= 0;
+                busy <= 0;*/
 
                     current_state <= DECODE_ADDRESS; 
                 end
@@ -34,7 +41,19 @@ module r_fsm(clk, resetn, pkt_valid, /*data_in,*/ fifo_full, fifo_empty_0, fifo_
 
 
             always@(*) begin
-
+                
+                write_enb_reg = 0;
+                detect_add = 0;
+                ld_state = 0;
+                laf_state = 0;
+                lfd_state = 0;
+                full_state = 0;
+                rst_int_reg = 0;
+                busy = 0;
+                
+                next_state = DECODE_ADDRESS;
+                
+                
                 case(current_state)
 
                 DECODE_ADDRESS: begin
