@@ -40,7 +40,6 @@
                                 else begin
                                     write_enb <= 'b0;
                                 end      
-                                $display("cjbsjcb: %b",fifo_full);
 
                             end 
 

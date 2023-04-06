@@ -21,10 +21,10 @@ endfunction
 
 function void r_virtual_seqr::build_phase(uvm_phase phase);
 
-    super.build_phase(phase);
 
     if(!uvm_config_db#(r_env_config)::get(this, "", "r_env_config", m_cfg))
         `uvm_fatal("Virtual_Sequencer", "cannot get the config, check if it is set")
+    super.build_phase(phase);
 
     rd_seqr = new[m_cfg.no_of_read_agents];
 

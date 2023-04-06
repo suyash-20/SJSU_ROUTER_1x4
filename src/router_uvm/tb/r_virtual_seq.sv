@@ -47,6 +47,9 @@ task r_virtual_seq::body();
     foreach(rd_seqr[i])
         rd_seqr[i] = v_seqr.rd_seqr[i];
 
+        //$display("==============================================================================================================mila?",v_seqr.rd_seqr[0]);
+
+
 endtask
 
 

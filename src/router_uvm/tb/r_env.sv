@@ -43,8 +43,13 @@ function void r_env::build_phase(uvm_phase phase);
         foreach(m_cfg.m_rd_cfg[i])begin	
             uvm_config_db#(rd_agent_config)::set(this,$sformatf("rd_agt[%0d]*",i),"rd_agent_config",m_cfg.m_rd_cfg[i]);
         
+        end
+        
+        rd_agt = new[m_cfg.no_of_read_agents];
+
+        foreach(rd_agt[i])
             rd_agt[i] = rd_agent::type_id::create($sformatf("rd_agt[%0d]", i), this);
-        end  
+
 	end
 
     if(m_cfg.has_virtual_sequencer)begin
@@ -71,6 +76,9 @@ function void r_env::connect_phase(uvm_phase phase);
         if(m_cfg.has_ragent) begin
             foreach(rd_agt[i])
 			r_vir_seqr.rd_seqr[i] = rd_agt[i].rd_seqr;
+
+        $display("==============================================================================================================hagga?",rd_agt[0]);
+
         end
     end
 

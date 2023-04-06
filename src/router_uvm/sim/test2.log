@@ -1,5 +1,5 @@
 # vsim -cvgperinstance -vopt -voptargs="+acc" -coverage -sva -c -do " log -r /* ;coverage save -onexit mem_cov2;run -all; exit" -wlf wave_file2.wlf -l test2.log -sv_seed random work.top "+UVM_TESTNAME=r_normal_test" 
-# Start time: 22:19:14 on Apr 05,2023
+# Start time: 00:54:12 on Apr 06,2023
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 2021.1 win64 Jan 19 2021
@@ -30,7 +30,7 @@
 # Loading work.r_fsm(fast)
 # Loading C:/questasim64_2021.1/uvm-1.1d\win64\uvm_dpi.dll
 # ** Warning: (vsim-8634) Code was not compiled with coverage options.
-# Sv_Seed = 3628792390
+# Sv_Seed = 3700388394
 #  log -r /* 
 # coverage save -onexit mem_cov2
 # run -all
@@ -57,6 +57,7 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test r_normal_test...
+# ==============================================================================================================hagga?65966
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 # ------------------------------------------------------------------
 # Name                       Type                        Size  Value
@@ -101,7 +102,7 @@
 #       lock_queue           array                       0     -    
 #       num_last_reqs        integral                    32    'd1  
 #       num_last_rsps        integral                    32    'd1  
-#     rd_agt[0]              rd_agent                    -     @527 
+#     rd_agt[0]              rd_agent                    -     @530 
 #       rd_drv               rd_driver                   -     @932 
 #         rsp_port           uvm_analysis_port           -     @947 
 #         seq_item_port      uvm_seq_item_pull_port      -     @939 
@@ -114,7 +115,7 @@
 #         lock_queue         array                       0     -    
 #         num_last_reqs      integral                    32    'd1  
 #         num_last_rsps      integral                    32    'd1  
-#     rd_agt[1]              rd_agent                    -     @535 
+#     rd_agt[1]              rd_agent                    -     @537 
 #       rd_drv               rd_driver                   -     @1087
 #         rsp_port           uvm_analysis_port           -     @1102
 #         seq_item_port      uvm_seq_item_pull_port      -     @1094
@@ -127,7 +128,7 @@
 #         lock_queue         array                       0     -    
 #         num_last_reqs      integral                    32    'd1  
 #         num_last_rsps      integral                    32    'd1  
-#     rd_agt[2]              rd_agent                    -     @543 
+#     rd_agt[2]              rd_agent                    -     @544 
 #       rd_drv               rd_driver                   -     @1242
 #         rsp_port           uvm_analysis_port           -     @1257
 #         seq_item_port      uvm_seq_item_pull_port      -     @1249
@@ -168,22 +169,136 @@
 #         num_last_rsps      integral                    32    'd1  
 # ------------------------------------------------------------------
 # 
-# UVM_FATAL @ 0: reporter@@rd_seq1[0] [SEQ] neither the item's sequencer nor dedicated sequencer has been supplied to start item in rd_seq1[0]
+# UVM_INFO ../wr_agent/wr_driver.sv(81) @ 410: uvm_test_top.env.wr_agt.wr_drv [ROUTER_WR_DRIVER] printing from Write Driver 
+#  ------------------------------------------------------------------------------------------
+# Name                           Type          Size  Value                                  
+# ------------------------------------------------------------------------------------------
+# req                            wr_trans_xtn  -     @1754                                  
+#   begin_time                   time          64    30                                     
+#   depth                        int           32    'd2                                    
+#   parent sequence (name)       string        7     wr_seq1                                
+#   parent sequence (full name)  string        39    uvm_test_top.env.wr_agt.wr_seqr.wr_seq1
+#   sequencer                    string        31    uvm_test_top.env.wr_agt.wr_seqr        
+#   header                       integral      8     'b1000001                              
+#   payload[0]                   integral      8     250                                    
+#   payload[1]                   integral      8     'd72                                   
+#   payload[2]                   integral      8     'd118                                  
+#   payload[3]                   integral      8     'd116                                  
+#   payload[4]                   integral      8     151                                    
+#   payload[5]                   integral      8     'd126                                  
+#   payload[6]                   integral      8     203                                    
+#   payload[7]                   integral      8     177                                    
+#   payload[8]                   integral      8     'd52                                   
+#   payload[9]                   integral      8     242                                    
+#   payload[10]                  integral      8     'd28                                   
+#   payload[11]                  integral      8     160                                    
+#   payload[12]                  integral      8     213                                    
+#   payload[13]                  integral      8     168                                    
+#   payload[14]                  integral      8     185                                    
+#   payload[15]                  integral      8     217                                    
+#   parity                       integral      8     'd5                                    
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agent/wr_monitor.sv(83) @ 420: uvm_test_top.env.wr_agt.monh [ROUTER_WR_MONITOR] printing from Write Monitor 
+#  --------------------------------------------
+# Name           Type          Size  Value    
+# --------------------------------------------
+# xtn            wr_trans_xtn  -     @1698    
+#   header       integral      8     'b1000001
+#   payload[0]   integral      8     250      
+#   payload[1]   integral      8     'd72     
+#   payload[2]   integral      8     'd118    
+#   payload[3]   integral      8     'd116    
+#   payload[4]   integral      8     151      
+#   payload[5]   integral      8     'd126    
+#   payload[6]   integral      8     203      
+#   payload[7]   integral      8     177      
+#   payload[8]   integral      8     'd52     
+#   payload[9]   integral      8     242      
+#   payload[10]  integral      8     'd28     
+#   payload[11]  integral      8     160      
+#   payload[12]  integral      8     213      
+#   payload[13]  integral      8     168      
+#   payload[14]  integral      8     185      
+#   payload[15]  integral      8     217      
+#   parity       integral      8     'd5      
+# --------------------------------------------
+# 
+# UVM_INFO ../rd_agent/rd_driver.sv(71) @ 730: uvm_test_top.env.rd_agt[1].rd_drv [ROUTER_RD_MONITOR] printing from Read Driver
+#  ------------------------------------------------------------------------------------------------
+# Name                           Type          Size  Value                                        
+# ------------------------------------------------------------------------------------------------
+# this                           rd_trans_xtn  -     @1762                                        
+#   begin_time                   time          64    0                                            
+#   depth                        int           32    'd2                                          
+#   parent sequence (name)       string        10    rd_seq1[1]                                   
+#   parent sequence (full name)  string        45    uvm_test_top.env.rd_agt[1].rd_seqr.rd_seq1[1]
+#   sequencer                    string        34    uvm_test_top.env.rd_agt[1].rd_seqr           
+#   header                       integral      8     'd0                                          
+#   parity                       integral      8     'd0                                          
+#   no_of_cycles                 integral      8     'd11                                         
+# ------------------------------------------------------------------------------------------------
+# 
+# ------------------------------------------------------------------------------------------------
+# Name                           Type          Size  Value                                        
+# ------------------------------------------------------------------------------------------------
+# this                           rd_trans_xtn  -     @1762                                        
+#   begin_time                   time          64    0                                            
+#   depth                        int           32    'd2                                          
+#   parent sequence (name)       string        10    rd_seq1[1]                                   
+#   parent sequence (full name)  string        45    uvm_test_top.env.rd_agt[1].rd_seqr.rd_seq1[1]
+#   sequencer                    string        34    uvm_test_top.env.rd_agt[1].rd_seqr           
+#   header                       integral      8     'd0                                          
+#   parity                       integral      8     'd0                                          
+#   no_of_cycles                 integral      8     'd11                                         
+# ------------------------------------------------------------------------------------------------
+# UVM_INFO ../rd_agent/rd_monitor.sv(81) @ 800: uvm_test_top.env.rd_agt[1].rd_monh [ROUTER_RD_MONITOR] printing from Read Monitor 
+#  -----------------------------------------
+# Name            Type          Size  Value
+# -----------------------------------------
+# xtn             rd_trans_xtn  -     @1918
+#   header        integral      8     'd72 
+#   payload[0]    integral      8     'd118
+#   payload[1]    integral      8     'd116
+#   payload[2]    integral      8     151  
+#   payload[3]    integral      8     'd126
+#   payload[4]    integral      8     203  
+#   payload[5]    integral      8     177  
+#   payload[6]    integral      8     'd52 
+#   payload[7]    integral      8     242  
+#   payload[8]    integral      8     'd28 
+#   payload[9]    integral      8     160  
+#   payload[10]   integral      8     213  
+#   payload[11]   integral      8     168  
+#   payload[12]   integral      8     185  
+#   payload[13]   integral      8     217  
+#   payload[14]   integral      8     'd0  
+#   payload[15]   integral      8     'd0  
+#   payload[16]   integral      8     'd0  
+#   payload[17]   integral      8     'd0  
+#   parity        integral      8     'd0  
+#   no_of_cycles  integral      8     'd0  
+# -----------------------------------------
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 5730: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :    4
+# UVM_INFO :    9
 # UVM_WARNING :    0
 # UVM_ERROR :    0
-# UVM_FATAL :    1
+# UVM_FATAL :    0
 # ** Report counts by id
 # [Questa UVM]     2
 # [RNTST]     1
-# [SEQ]     1
+# [ROUTER_RD_MONITOR]     2
+# [ROUTER_WR_DRIVER]     1
+# [ROUTER_WR_MONITOR]     1
+# [TEST_DONE]     1
 # [UVMTOP]     1
-# ** Note: $finish    : C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
-#    Time: 0 ns  Iteration: 55  Region: /uvm_pkg::uvm_sequence_base::start
+# ** Note: $finish    : C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 5730 ns  Iteration: 54  Instance: /top
 # Saving coverage database on exit...
-# End time: 22:19:22 on Apr 05,2023, Elapsed time: 0:00:08
+# End time: 00:54:26 on Apr 06,2023, Elapsed time: 0:00:14
 # Errors: 0, Warnings: 1
