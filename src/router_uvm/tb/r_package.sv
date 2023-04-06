@@ -4,9 +4,9 @@ package r_package;
 
 	`include "uvm_macros.svh"
    
-	//`include "write_xtn.sv"
-	//`include "router_wr_agent_config.sv"
-	//`include "router_rd_agent_config.sv"
+	`include "wr_trans_xtn.sv"
+	`include "wr_agent_config.sv"
+	`include "rd_agent_config.sv"
 
 	`include "r_env_config.sv"
 
@@ -14,18 +14,18 @@ package r_package;
 	`include "wr_monitor.sv"
 	`include "wr_sequencer.sv"
 	`include "wr_agent.sv"
-	//`include "router_wr_seqs.sv"
+	`include "wr_seq.sv"
 	
-	//`include "read_xtn.sv"
+	`include "rd_trans_xtn.sv"
 
 	`include "rd_driver.sv"
 	`include "rd_monitor.sv"
 	`include "rd_sequencer.sv"
 	`include "rd_agent.sv"
-	//`include "router_rd_seqs.sv"
+	`include "rd_seq.sv"
 
-	//`include "router_virtual_sequencer.sv"
-	//`include "router_virtual_seqs.sv"
+	`include "r_virtual_seqr.sv"
+	`include "r_virtual_seq.sv"
 	`include "r_scoreboard.sv"
 
 	`include "r_env.sv"

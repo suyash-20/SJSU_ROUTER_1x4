@@ -4,6 +4,9 @@
 
 class r_env_config extends uvm_object;
 
+  `uvm_object_utils(r_env_config)
+
+
 //------------------------------------------
 // Data Members
 //------------------------------------------
@@ -11,11 +14,12 @@ class r_env_config extends uvm_object;
     bit has_ragent = 1;
     bit has_virtual_sequencer = 1;
     bit has_scoreboard = 1;
-    //router_wr_agent_config m_wr_cfg;
-    //router_rd_agent_config m_rd_cfg[];
     int no_of_read_agents = 4;
 
-    `uvm_object_utils(r_env_config)
+    
+    wr_agent_config m_wr_cfg;
+    rd_agent_config m_rd_cfg[];
+
 
 //------------------------------------------
 // Methods

@@ -1,4 +1,4 @@
-class wr_sequencer extends uvm_sequencer;
+class wr_sequencer extends uvm_sequencer #(wr_trans_xtn);
 
     `uvm_component_utils(wr_sequencer)
 

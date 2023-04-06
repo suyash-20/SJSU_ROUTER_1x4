@@ -1,4 +1,4 @@
-class rd_sequencer extends uvm_sequencer;
+class rd_sequencer extends uvm_sequencer #(rd_trans_xtn);
 
     `uvm_component_utils(rd_sequencer)
 
