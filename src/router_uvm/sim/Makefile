@@ -1,5 +1,5 @@
 #Makefile for UVM Testbench
-#RTL= ../rtl/*
+RTL= ../rtl/*
 work= work #library name
 SVTB1= ../tb/top.sv
 INC = +incdir+../tb +incdir+../test +incdir+../wr_agent +incdir+../rd_agent
@@ -23,7 +23,7 @@ run_test:sv_cmp
 
 	
 run_test1:sv_cmp
-	vsim -cvgperinstance $(VSIMOPT) $(VSIMCOV) $(VSIMBATCH2)  -wlf wave_file2.wlf -l test2.log  -sv_seed random  work.top +UVM_TESTNAME=router_second_test
+	vsim -cvgperinstance $(VSIMOPT) $(VSIMCOV) $(VSIMBATCH2)  -wlf wave_file2.wlf -l test2.log  -sv_seed random  work.top +UVM_TESTNAME=r_normal_test
 	vcover report  -cvg  -details     -assert -directive -html mem_cov2
 	
 run_test2:sv_cmp
